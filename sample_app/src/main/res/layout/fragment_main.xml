@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <hotchpotch.github.com.fontengine.widget.IconicFontTextView
+        android:text="FontAwesome github icon is {fa-github} {fa-github-alt} {fa-github-square}. Typicons github icon is {typcn-social-github} {typcn-social-github-circular}."
+        android:id="@+id/iconic_font_text_view"
+        android:layout_width="match_parent"
+        android:layout_margin="10sp"
+        android:fontFamily="times"
+        android:textSize="22sp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

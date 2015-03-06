@@ -1,6 +1,5 @@
 package com.github.hotchpotch.fontengine;
 
-import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
@@ -27,7 +26,7 @@ public class IconicFontEngine {
         defaultEngines.add(engine);
     }
 
-    static public CharSequence apply(Context context, CharSequence charSequence, ArrayList<IconicFontEngine> engines) {
+    public static CharSequence apply(CharSequence charSequence, ArrayList<IconicFontEngine> engines) {
         if (TextUtils.isEmpty(charSequence)) {
             return "";
         }

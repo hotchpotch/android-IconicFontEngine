@@ -39,6 +39,6 @@ public class IconicFontTextView extends TextView {
 
     @Override
     public void setText(CharSequence text, BufferType type) {
-        super.setText(IconicFontEngine.apply(getContext(), text, getIconicFontEngineList()), type);
+        super.setText(IconicFontEngine.apply(text, getIconicFontEngineList()), type);
     }
 }

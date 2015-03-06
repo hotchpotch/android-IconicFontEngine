@@ -1,4 +1,4 @@
-package com.github.hotchpotch.iconicfontengine;
+package com.github.hotchpotch.sampleiconicfontengine;
 
 import android.graphics.Typeface;
 

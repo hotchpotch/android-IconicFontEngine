@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class IconicFontEngine {
     public static final String TAG = IconicFontEngine.class.getSimpleName();
-    private static ArrayList<IconicFontEngine> defaultEngines = new ArrayList<IconicFontEngine>();
+    private static ArrayList<IconicFontEngine> defaultEngines = new ArrayList<>();
 
     public static ArrayList<IconicFontEngine> getDefaultEngines() {
         return defaultEngines;

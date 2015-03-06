@@ -1,8 +1,8 @@
 package com.github.hotchpotch.fontengine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  * Created by yuichi-tateno on 2015/02/28.
@@ -24,7 +24,7 @@ public class IconicFontMap {
         return fontMap.get(key);
     }
 
-    public List<String> allNames() {
-        return new ArrayList<>(fontMap.keySet());
+    public SortedSet<String> allNames() {
+        return new TreeSet<>(fontMap.keySet());
     }
 }

@@ -5,11 +5,18 @@
               android:layout_height="match_parent">
 
     <com.github.hotchpotch.fontengine.widget.IconicFontTextView
-        android:text="FontAwesome github icon is {fa-github} {fa-github-alt} {fa-github-square}. Typicons github icon is {typcn-social-github} {typcn-social-github-circular}."
+        android:text="FontAwesome's github icon is {fa-github} {fa-github-alt} {fa-github-square}. Typicons's github icon is {typcn-social-github} {typcn-social-github-circular}."
         android:id="@+id/iconic_font_text_view"
         android:layout_width="match_parent"
         android:layout_margin="10sp"
-        android:fontFamily="times"
-        android:textSize="22sp"
+        android:textSize="30sp"
+        android:layout_height="wrap_content" />
+
+    <com.github.hotchpotch.fontengine.widget.IconicFontTextView
+        android:text=""
+        android:id="@+id/iconic_font_text_view_html"
+        android:layout_width="match_parent"
+        android:layout_margin="10sp"
+        android:textSize="30sp"
         android:layout_height="wrap_content" />
 </LinearLayout>

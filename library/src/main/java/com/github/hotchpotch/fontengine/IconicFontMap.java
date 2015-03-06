@@ -24,7 +24,7 @@ public class IconicFontMap {
         return fontMap.get(key);
     }
 
-    public List<String> list() {
+    public List<String> allNames() {
         return new ArrayList<>(fontMap.keySet());
     }
 }

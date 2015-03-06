@@ -36,7 +36,7 @@ public class IconicFontEngineIconsFragment extends Fragment {
         int enginePosition = getArguments().getInt(ENGINE_POSITION);
         IconicFontEngine engine = IconicFontEngine.getDefaultEngines().get(enginePosition);
         int position = 0;
-        for (String iconName: engine.getIconicFontMap().list()) {
+        for (String iconName: engine.getIconicFontMap().allNames()) {
             LinearLayout view = (LinearLayout) inflater.inflate(R.layout.iconic_view_layout, container, false);
             IconicFontTextView tv = (IconicFontTextView) view.findViewById(R.id.iconic_font_text_view);
             tv.setText("{" + iconName + "} " + iconName);

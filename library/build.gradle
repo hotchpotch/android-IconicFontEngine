@@ -54,7 +54,7 @@ bintray {
   pkg {
     repo = 'maven'
     name = 'IconicFontEngine'
-    desc = 'Iconic Fonts on Android TextView ...'
+    desc = 'Iconic Fonts in your TextView'
     websiteUrl = siteUrl
     issueTrackerUrl = siteUrl + '/issues'
     vcsUrl = gitUrl

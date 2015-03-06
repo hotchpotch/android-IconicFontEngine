@@ -12,7 +12,7 @@ public class IconicFontMap {
 
     public IconicFontMap() {
         super();
-        fontMap = new HashMap<String, Character>();
+        fontMap = new HashMap<>();
     }
 
     public IconicFontMap put(String key, Character value) {
@@ -25,6 +25,6 @@ public class IconicFontMap {
     }
 
     public List<String> list() {
-        return new ArrayList<String>(fontMap.keySet());
+        return new ArrayList<>(fontMap.keySet());
     }
 }

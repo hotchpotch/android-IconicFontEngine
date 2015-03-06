@@ -1,7 +1,6 @@
 package com.github.hotchpotch.fontengine;
 
 import android.graphics.Typeface;
-import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -30,13 +29,7 @@ public class IconicFontEngine {
         if (TextUtils.isEmpty(charSequence)) {
             return "";
         }
-
-        if (charSequence instanceof Spanned) {
-            String text = Html.toHtml((Spanned) charSequence);
-            return Html.fromHtml(render(new StringBuilder((text)), engines).toString());
-        }
-
-        return render(new StringBuilder(charSequence), engines);
+        return render(new SpannableStringBuilder(charSequence), engines);
     }
 
     private Typeface typeface;
@@ -56,10 +49,11 @@ public class IconicFontEngine {
         this.iconicFontMap = iconicFontMap;
     }
 
-    private static CharSequence render(StringBuilder text, ArrayList<IconicFontEngine> engines) {
+    private static CharSequence render(SpannableStringBuilder builder, ArrayList<IconicFontEngine> engines) {
         int caret = 0;
         List<Pair<Integer, IconicFontEngine>> positions = new ArrayList<>();
         while (true) {
+            StringBuilder text = new StringBuilder(builder.toString());
             int startBracketIndex = text.indexOf("{", caret);
             int endBracketIndex = text.indexOf("}", startBracketIndex + 1);
             if (startBracketIndex == -1 || endBracketIndex == -1) { break; }
@@ -69,7 +63,7 @@ public class IconicFontEngine {
             for (IconicFontEngine engine : engines) {
                 Character fontChar = engine.getIconicFontMap().get(iconString);
                 if (fontChar != null) {
-                    text = text.replace(startBracketIndex, endBracketIndex + 1, String.valueOf(fontChar));
+                    builder = builder.replace(startBracketIndex, endBracketIndex + 1, String.valueOf(fontChar));
                     positions.add(new Pair<>(startBracketIndex, engine));
                     caret = startBracketIndex + 1;
                     found = true;
@@ -82,8 +76,6 @@ public class IconicFontEngine {
             }
         }
 
-        SpannableStringBuilder builder = new SpannableStringBuilder();
-        builder.append(text);
         for (Pair<Integer, IconicFontEngine> pair : positions) {
             setSpan(pair.second.getTypeface(), builder, pair.first);
         }

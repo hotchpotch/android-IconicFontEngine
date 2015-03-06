@@ -49,11 +49,11 @@ public class IconicFontEngine {
         this.iconicFontMap = iconicFontMap;
     }
 
-    private static CharSequence render(SpannableStringBuilder builder, ArrayList<IconicFontEngine> engines) {
+    private static CharSequence render(SpannableStringBuilder spannableStringBuilder, ArrayList<IconicFontEngine> engines) {
         int caret = 0;
         List<Pair<Integer, IconicFontEngine>> positions = new ArrayList<>();
         while (true) {
-            StringBuilder text = new StringBuilder(builder.toString());
+            StringBuilder text = new StringBuilder(spannableStringBuilder.toString());
             int startBracketIndex = text.indexOf("{", caret);
             int endBracketIndex = text.indexOf("}", startBracketIndex + 1);
             if (startBracketIndex == -1 || endBracketIndex == -1) { break; }
@@ -63,7 +63,7 @@ public class IconicFontEngine {
             for (IconicFontEngine engine : engines) {
                 Character fontChar = engine.getIconicFontMap().get(iconString);
                 if (fontChar != null) {
-                    builder = builder.replace(startBracketIndex, endBracketIndex + 1, String.valueOf(fontChar));
+                    spannableStringBuilder.replace(startBracketIndex, endBracketIndex + 1, String.valueOf(fontChar));
                     positions.add(new Pair<>(startBracketIndex, engine));
                     caret = startBracketIndex + 1;
                     found = true;
@@ -77,9 +77,9 @@ public class IconicFontEngine {
         }
 
         for (Pair<Integer, IconicFontEngine> pair : positions) {
-            setSpan(pair.second.getTypeface(), builder, pair.first);
+            setSpan(pair.second.getTypeface(), spannableStringBuilder, pair.first);
         }
-        return builder;
+        return spannableStringBuilder;
     }
 
     private static void setSpan(Typeface typeface, SpannableStringBuilder builder, int startIndex) {

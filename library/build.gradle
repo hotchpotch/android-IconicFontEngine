@@ -43,8 +43,8 @@ def siteUrl = 'https://github.com/hotchpotch/IconicFontEngine-android'
 def gitUrl = siteUrl + '.git'
 
 bintray {
-  user = bintray_user
-  key = bintray_api_key
+  user = project.has('bintray_user') ? project['bintray_user'] : ''
+  key = project.has('bintray_api_key') ? project['bintray_api_key'] : ''
 
   configurations = ['archives'] //When uploading configuration files
   pkg {

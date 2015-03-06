@@ -52,7 +52,6 @@ public class IconicFontEngine {
         return iconicFontMap;
     }
 
-
     public IconicFontEngine(Typeface typeface, IconicFontMap iconicFontMap) {
         this.typeface = typeface;
         this.iconicFontMap = iconicFontMap;

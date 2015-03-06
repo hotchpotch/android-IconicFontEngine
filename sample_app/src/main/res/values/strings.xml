@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IconicFontEngine - Sample</string>
+
+
+    <string name="title_section1">main</string>
+    <string name="title_section2">FontAwesome</string>
+    <string name="title_section3">Typicons</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

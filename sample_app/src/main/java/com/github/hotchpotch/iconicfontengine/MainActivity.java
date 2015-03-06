@@ -1,4 +1,4 @@
-package hotchpotch.github.com.iconicfontengine;
+package com.github.hotchpotch.iconicfontengine;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import hotchpotch.github.com.fontengine.IconicFontEngine;
-import hotchpotch.github.com.fontengine.widget.IconicFontTextView;
+import com.github.hotchpotch.fontengine.IconicFontEngine;
+import com.github.hotchpotch.fontengine.widget.IconicFontTextView;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 

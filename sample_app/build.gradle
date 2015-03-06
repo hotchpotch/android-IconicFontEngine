@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "hotchpotch.github.com.iconicfontengine"
+        applicationId "com.github.hotchpotch.iconicfontengine"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1

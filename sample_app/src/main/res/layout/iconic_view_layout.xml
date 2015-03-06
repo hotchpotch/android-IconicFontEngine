@@ -4,7 +4,7 @@
     android:padding="6dp"
     android:layout_height="wrap_content">
 
-    <hotchpotch.github.com.fontengine.widget.IconicFontTextView
+    <com.github.hotchpotch.fontengine.widget.IconicFontTextView
         android:id="@+id/iconic_font_text_view"
         android:layout_width="match_parent"
         android:textSize="18sp"

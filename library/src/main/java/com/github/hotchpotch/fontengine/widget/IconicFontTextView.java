@@ -1,12 +1,12 @@
 
-package hotchpotch.github.com.fontengine.widget;
+package com.github.hotchpotch.fontengine.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import hotchpotch.github.com.fontengine.IconicFontEngine;
-import hotchpotch.github.com.fontengine.IconicFontEngineList;
+import com.github.hotchpotch.fontengine.IconicFontEngine;
+import com.github.hotchpotch.fontengine.IconicFontEngineList;
 
 public class IconicFontTextView extends TextView {
     public static final String TAG = IconicFontTextView.class.getSimpleName();

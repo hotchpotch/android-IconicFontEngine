@@ -1,4 +1,4 @@
-package hotchpotch.github.com.fontengine;
+package com.github.hotchpotch.fontengine;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

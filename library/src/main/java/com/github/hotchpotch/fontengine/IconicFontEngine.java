@@ -78,7 +78,7 @@ public class IconicFontEngine {
                     break;
                 }
             }
-            if (found == false) {
+            if (!found) {
                 Log.w(TAG, "{" + iconString + "} not fount in fontMaps");
                 caret = endBracketIndex + 1;
             }

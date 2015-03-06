@@ -17,9 +17,9 @@ import java.util.List;
  */
 public class IconicFontEngine {
     public static final String TAG = IconicFontEngine.class.getSimpleName();
-    private static IconicFontEngineList defaultEngines = new IconicFontEngineList();
+    private static ArrayList<IconicFontEngine> defaultEngines = new ArrayList<IconicFontEngine>();
 
-    public static IconicFontEngineList getDefaultEngines() {
+    public static ArrayList<IconicFontEngine> getDefaultEngines() {
         return defaultEngines;
     }
 
@@ -27,7 +27,7 @@ public class IconicFontEngine {
         defaultEngines.add(engine);
     }
 
-    static public CharSequence apply(Context context, CharSequence charSequence, IconicFontEngineList engines) {
+    static public CharSequence apply(Context context, CharSequence charSequence, ArrayList<IconicFontEngine> engines) {
         if (TextUtils.isEmpty(charSequence)) {
             return "";
         }
@@ -58,7 +58,7 @@ public class IconicFontEngine {
         this.iconicFontMap = iconicFontMap;
     }
 
-    private static CharSequence render(StringBuilder text, IconicFontEngineList engines) {
+    private static CharSequence render(StringBuilder text, ArrayList<IconicFontEngine> engines) {
         int caret = 0;
         List<Pair<Integer, IconicFontEngine>> positions = new ArrayList<>();
         while (true) {

@@ -6,12 +6,13 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.github.hotchpotch.fontengine.IconicFontEngine;
-import com.github.hotchpotch.fontengine.IconicFontEngineList;
+
+import java.util.ArrayList;
 
 public class IconicFontTextView extends TextView {
     public static final String TAG = IconicFontTextView.class.getSimpleName();
 
-    private IconicFontEngineList iconicFontEngines;
+    private ArrayList<IconicFontEngine> iconicFontEngines;
     public IconicFontTextView(Context context) {
         super(context);
     }
@@ -24,11 +25,11 @@ public class IconicFontTextView extends TextView {
         super(context, attrs, defStyle);
     }
 
-    public void setIconicFontEngines(IconicFontEngineList engines) {
+    public void setIconicFontEngines(ArrayList<IconicFontEngine> engines) {
         this.iconicFontEngines = engines;
     }
 
-    public IconicFontEngineList getIconicFontEngineList() {
+    public ArrayList<IconicFontEngine> getIconicFontEngineList() {
         if (this.iconicFontEngines == null) {
             return IconicFontEngine.getDefaultEngines();
         } else {

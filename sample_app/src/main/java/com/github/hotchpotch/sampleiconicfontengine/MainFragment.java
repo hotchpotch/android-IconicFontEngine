@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.github.hotchpotch.fontengine.widget.IconicFontTextView;
+import com.github.hotchpotch.iconicfontengine.widget.IconicFontTextView;
 
 /**
 * Created by yuichi-tateno on 2015/03/06.

@@ -2,8 +2,8 @@ package com.github.hotchpotch.sampleiconicfontengine;
 
 import android.graphics.Typeface;
 
-import com.github.hotchpotch.fontengine.IconicFontEngine;
-import com.github.hotchpotch.fontengine.IconicFontMap;
+import com.github.hotchpotch.iconicfontengine.IconicFontEngine;
+import com.github.hotchpotch.iconicfontengine.IconicFontMap;
 
 /**
  * Created by yuichi-tateno on 2015/02/28.

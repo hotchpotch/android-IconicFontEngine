@@ -1,4 +1,4 @@
-package com.github.hotchpotch.fontengine;
+package com.github.hotchpotch.iconicfontengine;
 
 import android.graphics.Typeface;
 import android.text.SpannableStringBuilder;

@@ -1,1 +1,1 @@
-include ':sample_app', ':library'
+include ':sample_app', ':iconic-font-engine'

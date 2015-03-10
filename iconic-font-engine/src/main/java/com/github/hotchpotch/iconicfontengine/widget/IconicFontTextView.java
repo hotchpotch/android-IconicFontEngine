@@ -1,11 +1,11 @@
 
-package com.github.hotchpotch.fontengine.widget;
+package com.github.hotchpotch.iconicfontengine.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.github.hotchpotch.fontengine.IconicFontEngine;
+import com.github.hotchpotch.iconicfontengine.IconicFontEngine;
 
 import java.util.ArrayList;
 

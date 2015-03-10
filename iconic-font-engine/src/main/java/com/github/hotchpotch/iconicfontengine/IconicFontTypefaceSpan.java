@@ -1,5 +1,5 @@
 
-package com.github.hotchpotch.fontengine;
+package com.github.hotchpotch.iconicfontengine;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;

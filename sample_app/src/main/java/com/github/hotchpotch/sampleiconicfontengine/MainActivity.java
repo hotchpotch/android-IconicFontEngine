@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 
-import com.github.hotchpotch.fontengine.IconicFontEngine;
+import com.github.hotchpotch.iconicfontengine.IconicFontEngine;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 

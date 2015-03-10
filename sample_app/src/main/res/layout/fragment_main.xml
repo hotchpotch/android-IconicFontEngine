@@ -19,4 +19,11 @@
         android:layout_margin="10sp"
         android:textSize="30sp"
         android:layout_height="wrap_content" />
+
+    <com.github.hotchpotch.iconicfontengine.widget.IconicFontEditText
+        android:text="editable {typcn-document-text} text"
+        android:layout_width="match_parent"
+        android:layout_margin="10sp"
+        android:textSize="30sp"
+        android:layout_height="wrap_content" />
 </LinearLayout>

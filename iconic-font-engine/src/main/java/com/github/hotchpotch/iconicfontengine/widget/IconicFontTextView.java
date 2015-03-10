@@ -25,20 +25,12 @@ public class IconicFontTextView extends TextView {
         super(context, attrs, defStyle);
     }
 
-    public void setIconicFontEngines(ArrayList<IconicFontEngine> engines) {
-        this.iconicFontEngines = engines;
-    }
-
-    public ArrayList<IconicFontEngine> getIconicFontEngineList() {
-        if (this.iconicFontEngines == null) {
-            return IconicFontEngine.getDefaultEngines();
-        } else {
-            return this.iconicFontEngines;
-        }
-    }
-
     @Override
     public void setText(CharSequence text, BufferType type) {
-        super.setText(IconicFontEngine.apply(text, getIconicFontEngineList()), type);
+        super.setText(IconicFontEngine.apply(text), type);
+    }
+
+    public void setTextWithEngines(CharSequence text, BufferType type, ArrayList<IconicFontEngine> engines) {
+        super.setText(IconicFontEngine.apply(text, engines), type);
     }
 }

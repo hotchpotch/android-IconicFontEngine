@@ -29,19 +29,13 @@ public class IconicFontButton extends Button {
     public IconicFontButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
-    public void setIconicFontEngines(ArrayList<IconicFontEngine> engines) {
-        this.iconicFontEngines = engines;
-    }
 
-    public ArrayList<IconicFontEngine> getIconicFontEngineList() {
-        if (this.iconicFontEngines == null) {
-            return IconicFontEngine.getDefaultEngines();
-        } else {
-            return this.iconicFontEngines;
-        }
-    }
     @Override
     public void setText(CharSequence text, BufferType type) {
-        super.setText(IconicFontEngine.apply(text, getIconicFontEngineList()), TextView.BufferType.SPANNABLE);
+        super.setText(IconicFontEngine.apply(text), TextView.BufferType.SPANNABLE);
+    }
+
+    public void setTextWithEngines(CharSequence text, BufferType type, ArrayList<IconicFontEngine> engines) {
+        super.setText(IconicFontEngine.apply(text, engines), TextView.BufferType.SPANNABLE);
     }
 }

@@ -25,6 +25,10 @@ public class IconicFontEngine {
         defaultEngines.add(engine);
     }
 
+    public static CharSequence apply(CharSequence charSequence) {
+        return apply(charSequence, getDefaultEngines());
+    }
+
     public static CharSequence apply(CharSequence charSequence, ArrayList<IconicFontEngine> engines) {
         if (TextUtils.isEmpty(charSequence)) {
             return "";
